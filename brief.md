@@ -20,11 +20,19 @@ An emergency mobile application should remain usable when 5G connectivity is los
 Resource: Android Developers - Build an offline-first app - https://developer.android.com/topic/architecture/data-layer/offline-first
 
 ## Networking
+5G network slicing allows operators to customize connectivity for different services. For emergency responders, a dedicated network slice could be configured to provide suitable quality of service during network congestion. This can help support important communications when many people are using the network simultaneously. However, network slicing does not eliminate all risks, because shared infrastructure failures may still disrupt connectivity. Operators must also plan for backup communication options.
+
+Resource: GSMA - What is Network Slicing? - https://www.gsma.com/solutions-and-impact/technologies/networks/5g-network-technologies-and-solutions/5g-standalone-networks/network-slicing/
 
 ## Cybersecurity
+NIST describes four incident response phases: preparation, detection and analysis, containment with eradication and recovery, and post-incident activity. For a 5G emergency service, preparation includes response plans and backup communications. Security teams then investigate suspicious alerts and logs. If an attack is confirmed, they contain the threat, remove malicious components, and restore affected systems. Finally, they document the incident and review lessons learned to improve future responses.
+
+Resource: NIST - Computer Security Incident Handling Guide, Section 3 - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf
 
 ## Data
+A star schema connects a central fact table directly to dimension tables, making filtering and reporting simpler. A snowflake schema normalizes dimensions into multiple related tables, reducing repeated information but adding relationship complexity. For daily 5G usage reports by region, I would choose a star schema with usage measurements in a fact table and separate date and region dimensions. This structure supports clear summaries and easier analysis, although the best design depends on data requirements.
 
+Resource: Microsoft Learn - Understand star schema and the importance for Power BI - https://learn.microsoft.com/en-us/power-bi/guidance/star-schema
 ## Misconception in My Track
 
 ## Open Question
