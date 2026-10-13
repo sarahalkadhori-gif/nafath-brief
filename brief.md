@@ -34,5 +34,6 @@ A star schema connects a central fact table directly to dimension tables, making
 
 Resource: Microsoft Learn - Understand star schema and the importance for Power BI - https://learn.microsoft.com/en-us/power-bi/guidance/star-schema
 ## Misconception in My Track
-
+A common misconception in software engineering is that every unsafe HTTP method is also non-idempotent. However, safety and idempotency describe different properties. Safe methods do not request a change in server state, while idempotent methods have the same intended effect when repeated as when executed once. RFC 9110, Section 9.2.2 (Idempotent Methods), explicitly identifies PUT, DELETE, and safe methods as idempotent. This distinction matters for emergency applications because a lost response may require retrying a request without unintentionally repeating an operation.
 ## Open Question
+How can an emergency reporting application safely retry non-idempotent POST requests after a 5G outage, while preventing duplicate reports if the server processed the original request but its response never reached the mobile device?
